@@ -3,6 +3,7 @@ package com.lou.sao.entity.custom;
 import org.jetbrains.annotations.Nullable;
 
 import com.lou.sao.entity.ModEntities;
+import com.lou.sao.entity.ai.WuboAttackGoal;
 
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityPose;
@@ -11,11 +12,15 @@ import net.minecraft.entity.ai.goal.AnimalMateGoal;
 import net.minecraft.entity.ai.goal.FollowParentGoal;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
+import net.minecraft.entity.ai.goal.RevengeGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -27,16 +32,34 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
 public class WuboEntity extends AnimalEntity{
+    private static final TrackedData<Boolean> ATTACKING = 
+        DataTracker.registerData(WuboEntity.class,TrackedDataHandlerRegistry.BOOLEAN);
 
+    // 注册动画 
     public final AnimationState idlAnimationState = new AnimationState();
     private int idlAnimationTimeOut = 0;
 
+    public final AnimationState attackAnimationState = new AnimationState();
+    public int attackAnimationTimeOut = 0;
+
+    // 设置动画条件
     private void SetUpAnimationState(){
         if(this.idlAnimationTimeOut <= 0){
             this.idlAnimationTimeOut = this.random.nextInt(40) + 80;
             this.idlAnimationState.start(this.age);
         }else{
             --this.idlAnimationTimeOut;
+        }
+        
+        if(this.isAttacking() && this.attackAnimationTimeOut <= 0){
+            this.attackAnimationTimeOut = 40;
+            this.attackAnimationState.start(this.age);
+        }else{
+            --this.attackAnimationTimeOut;
+        }
+
+        if(!this.isAttacking()){
+            attackAnimationState.stop();
         }
     }
      
@@ -68,6 +91,9 @@ public class WuboEntity extends AnimalEntity{
         this.goalSelector.add(4, new WanderAroundFarGoal(this,1.00));
         this.goalSelector.add(5, new LookAtEntityGoal(this,PlayerEntity.class,3f));
         this.goalSelector.add(6, new LookAroundGoal(this));
+
+        this.goalSelector.add(1, new WuboAttackGoal(this, 10, true));
+        this.targetSelector.add(1, new RevengeGoal(this));
     }
 
     // 对生物实体添加生命值、护甲、速度等参数，记得在saomod.java中注册
@@ -90,5 +116,20 @@ public class WuboEntity extends AnimalEntity{
         return ModEntities.WUBO.create(world);
     }
 
+    @Override
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(ATTACKING, false);
+    }
+
+    @Override
+    public void setAttacking(boolean attacking) {
+        this.dataTracker.set(ATTACKING, attacking);
+    }
+
+    @Override
+    public boolean isAttacking() {
+        return this.dataTracker.get(ATTACKING);
+    }
 
 }

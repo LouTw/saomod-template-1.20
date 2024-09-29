@@ -57,6 +57,7 @@ public class WuboModel<T extends WuboEntity> extends SinglePartEntityModel<T> {
 
 		this.animateMovement(WuboAnimation.WALK,limbSwing,limbSwingAmount,2f,2.5f);
 		this.updateAnimation(entity.idlAnimationState,WuboAnimation.IDLE,ageInTicks,1f);
+		this.updateAnimation(entity.attackAnimationState, WuboAnimation.ATTACK, ageInTicks,1f);
 	}
 
 	private void setHeadAngles(float headAngles, float headPitch) {
