@@ -1,0 +1,34 @@
+{
+    "item.saomod.blade_nightfall" : "NightFall Blade",
+    "item.saomod.blade_sunrise" : "SunRise Blade",
+
+
+    "item.saomod.blade_sunrise_helmet" : "SunRise Helmet",
+    "item.saomod.blade_sunrise_chestplate" : "SunRise Chestplate",
+    "item.saomod.blade_sunrise_leggins" : "SunRise Leggings",
+    "item.saomod.blade_sunrise_boots" : "SunRise Boots",
+
+
+    "item.saomod.blade_nightfall_pickaxe" : "NightFall PickAxe",
+
+
+    "block.saomod.blade_nightfall_block" : "NightFall Blade Block",
+
+    "entity.minecraft.villager.blade_nightfall_master" : "NightFall Blade Master",
+
+    "blade_nightfall_sound_event": "Blade NightFall Swing Sound",
+
+    "blade_nightfall_block_break": "Blade NightFall Block Break Sound",
+
+    "blade_nightfall_block_fall": "Blade NightFall Block Fall Sound",
+
+    "blade_nightfall_block_hit": "Blade NightFall Block Hit Sound",
+
+    "blade_nightfall_block_place": "Blade NightFall Block Place Sound",
+
+    "blade_nightfall_block_step": "Blade NightFall Block Step Sound",
+
+
+    "itemGroup.sao_group" : "SAO Items"
+    
+}

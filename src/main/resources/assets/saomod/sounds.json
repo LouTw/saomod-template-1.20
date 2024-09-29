@@ -1,0 +1,44 @@
+{
+    "blade_nightfall_sound_event":{
+        "subtitle":"sounds.saomod.blade_nightfall_sound_event",
+        "sounds":[
+            "saomod:blade_nightfall_sound_event"
+        ]
+    },
+
+    "blade_nightfall_block_break":{
+        "subtitle":"sounds.saomod.blade_nightfall_block_break",
+        "sounds":[
+            "saomod:blade_nightfall_block_break"
+        ]
+    },
+
+    "blade_nightfall_block_fall":{
+        "subtitle":"sounds.saomod.blade_nightfall_block_fall",
+        "sounds":[
+            "saomod:blade_nightfall_block_fall"
+        ]
+    },
+
+    "blade_nightfall_block_hit":{
+        "subtitle":"sounds.saomod.blade_nightfall_block_hit",
+        "sounds":[
+            "saomod:blade_nightfall_block_hit"
+        ]
+    },
+
+    "blade_nightfall_block_place":{
+        "subtitle":"sounds.saomod.blade_nightfall_block_place",
+        "sounds":[
+            "saomod:blade_nightfall_block_place"
+        ]
+    },
+
+    "blade_nightfall_block_step":{
+        "subtitle":"sounds.saomod.blade_nightfall_block_step",
+        "sounds":[
+            "saomod:blade_nightfall_block_step"
+        ]
+    }
+
+}

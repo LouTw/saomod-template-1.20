@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.lou.sao.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"SAOModMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
