@@ -6,9 +6,15 @@ import com.lou.sao.datagen.ModLootTablesProvider;
 import com.lou.sao.datagen.ModModelsProvider;
 import com.lou.sao.datagen.ModPoiTagsProvider;
 import com.lou.sao.datagen.ModRecipesProvider;
+import com.lou.sao.datagen.ModWorldGenerator;
+import com.lou.sao.world.ModConfiguredFeatures;
+import com.lou.sao.world.ModPlacedFeatures;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 
 public class SAOModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -22,5 +28,12 @@ public class SAOModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelsProvider::new);
 		pack.addProvider(ModLootTablesProvider::new);
 		pack.addProvider(ModPoiTagsProvider::new);
+		pack.addProvider(ModWorldGenerator::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
 	}
 }

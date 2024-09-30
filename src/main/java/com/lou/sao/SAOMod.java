@@ -17,6 +17,7 @@ import com.lou.sao.sounds.ModSounds;
 import com.lou.sao.util.ModLootTableModifier;
 import com.lou.sao.util.ModTrades;
 import com.lou.sao.villager.ModVillagers;
+import com.lou.sao.world.gen.ModWorldGeneration;
 
 
 public class SAOMod implements ModInitializer {
@@ -46,5 +47,7 @@ public class SAOMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.WUBO, WuboEntity.createWuboAttributes());
+
+		ModWorldGeneration.generateModWorldGen();	
 	}
 }
