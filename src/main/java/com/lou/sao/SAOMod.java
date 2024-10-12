@@ -48,9 +48,6 @@ public class SAOMod implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.WUBO, WuboEntity.createWuboAttributes());
 
-		 // 初始化 TerraBlender
-		
-
 		 // 自定义世界生成
 		 ModWorldGeneration.generateModWorldGen();	
 	}
