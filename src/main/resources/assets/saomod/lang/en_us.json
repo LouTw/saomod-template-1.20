@@ -5,7 +5,7 @@
 
     "item.saomod.blade_sunrise_helmet" : "SunRise Helmet",
     "item.saomod.blade_sunrise_chestplate" : "SunRise Chestplate",
-    "item.saomod.blade_sunrise_leggins" : "SunRise Leggings",
+    "item.saomod.blade_sunrise_leggings" : "SunRise Leggings",
     "item.saomod.blade_sunrise_boots" : "SunRise Boots",
 
 
@@ -27,7 +27,7 @@
     "blade_nightfall_block_place": "Blade NightFall Block Place Sound",
 
     "blade_nightfall_block_step": "Blade NightFall Block Step Sound",
-
+    "block.saomod.legendary_blade_upgrade_block":"Legendary Blade Upgrade Block",
 
     "itemGroup.sao_group" : "SAO Items"
     

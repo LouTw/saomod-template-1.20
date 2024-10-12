@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class LegendaryBladeUpgradeBlockScreen extends HandledScreen<LegendaryBladeUpgradeBlockScreenHandler>{
 
     // 定义方块实体的GUI
-    private static final Identifier TEXTURE = new Identifier(SAOMod.MOD_ID,"textures/gui/Legendary_Blade_Upgrade_Block.png");
+    private static final Identifier TEXTURE = new Identifier(SAOMod.MOD_ID,"textures/gui/legendary_blade_upgrade_block_gui.png");
 
     public LegendaryBladeUpgradeBlockScreen(LegendaryBladeUpgradeBlockScreenHandler handler,PlayerInventory inventory,Text title){
         super(handler, inventory, title);

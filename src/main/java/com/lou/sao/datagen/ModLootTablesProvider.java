@@ -27,6 +27,7 @@ public class ModLootTablesProvider extends FabricBlockLootTableProvider{
     public void generate() {
         // 生成loot_tables/blocks，例：生成blade_nightfall_block.json并加入掉落
         addDrop(ModBlocks.Blade_nightfall_block);
+		addDrop(ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK);
 
 		// 添加掉落模式，例：对blade_nightfall_block应用铜矿类的掉落模式，第一项是方块，第二项是掉落物品
         addDrop(ModBlocks.Blade_nightfall_block,OreLikeDrops(ModBlocks.Blade_nightfall_block,Moditems.Blade_NightFall));

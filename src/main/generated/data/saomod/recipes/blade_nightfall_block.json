@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "saomod:blade_nightfall"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "saomod:blade_nightfall_block"
+  }
+}

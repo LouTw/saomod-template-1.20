@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "saomod:blade_sunrise_helmet",
+    "saomod:blade_sunrise_chestplate",
+    "saomod:blade_sunrise_leggings",
+    "saomod:blade_sunrise_boots"
+  ]
+}

@@ -25,11 +25,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
         // 生成tags\blocks\modblock_list.json，例：生成modblock.json并加入blade_nightfall_block;diamond_ores
         getOrCreateTagBuilder(ModTags.Blocks.MODBLOCK_LIST)
         .add(ModBlocks.Blade_nightfall_block)
+        .add(ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK)
         .forceAddTag(BlockTags.DIAMOND_ORES);
 
         // 生成tags\blocks\minable\(pickaxe/axe/hoe/shovel).json，例：生成pickaxe.json并加入blade_nightfall_block;diamond_ores
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
         .add(ModBlocks.Blade_nightfall_block)
+        .add(ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK)
         .forceAddTag(BlockTags.DIAMOND_ORES);
 
         // 生成tags\blocks\(needs_(iron/stone/diamond)_tool).json，例：生成needs_diamond_tool.json并加入blade_nightfall_block;diamond_ores

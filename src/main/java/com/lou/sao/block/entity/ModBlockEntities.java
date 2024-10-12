@@ -13,9 +13,9 @@ public class ModBlockEntities {
 
     // 将自定义方块实体绑定至对应的方块上
     public static final BlockEntityType<LegendaryBladeUpgradeBlockEntity> LEGENDARY_BLADE_UPGRADE_BLOCK_ENTITY = 
-        Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(SAOMod.MOD_ID,"legendary_blade_upgrade_block")
+        Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(SAOMod.MOD_ID,"legendary_blade_upgrade_block_entity")
         , FabricBlockEntityTypeBuilder.create(LegendaryBladeUpgradeBlockEntity::new
-        , ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK_ENTITY).build());
+        , ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK).build());
 
     public static void registerBlockEntities(){
         

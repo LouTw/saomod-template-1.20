@@ -44,9 +44,9 @@ public class ModConfiguredFeatures {
             List.of(OreFeatureConfig.createTarget(endPlace, ModBlocks.Blade_nightfall_block.getDefaultState()));   
 
         // 定义一个矿脉中最多有多少个矿石
-        register(context, BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overWorld, 12));
-        register(context, NETHER_BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(nether, 12));
-        register(context, END_BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(end, 12));
+        register(context, BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overWorld, 1));
+        register(context, NETHER_BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(nether, 1));
+        register(context, END_BLADE_NIGHTFALL_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(end, 1));
     }
 
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){

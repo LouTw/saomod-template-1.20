@@ -92,7 +92,7 @@ public class LegendaryBladeUpgradeBlockEntity extends BlockEntity implements Ext
     protected void writeNbt(NbtCompound nbt){
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("Legendary_Blade_Upgrade_Block",progress);
+        nbt.putInt("legendary_blade_upgrade_block",progress);
     }
 
     // 读nbt标签，用于加载世界时，实体方块里面的数据
@@ -100,7 +100,7 @@ public class LegendaryBladeUpgradeBlockEntity extends BlockEntity implements Ext
     public void readNbt(NbtCompound nbt){
         super.readNbt(nbt);
         Inventories.readNbt(nbt, inventory);
-        progress = nbt.getInt("Legendary_Blade_Upgrade_Block");
+        progress = nbt.getInt("legendary_blade_upgrade_block");
     }
 
     public void tick(World world1,BlockPos pos,BlockState state1){

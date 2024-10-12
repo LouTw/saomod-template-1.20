@@ -22,7 +22,7 @@ public class ModBlocks {
     , new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(ModSounds.BLADE_NIGHTFALL_BLOCK_SOUND_GROUP)));
 
     //注册新的自定义方块实体需要绑定的方块
-    public static final Block LEGENDARY_BLADE_UPGRADE_BLOCK_ENTITY = registerBlocks("Legendary_Blade_Upgrade_Block"
+    public static final Block LEGENDARY_BLADE_UPGRADE_BLOCK = registerBlocks("legendary_blade_upgrade_block"
     , new LegendaryBladeUpgradeBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
 
     private static Block registerBlocks(String name,Block block){

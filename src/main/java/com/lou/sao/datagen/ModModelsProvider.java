@@ -23,6 +23,8 @@ public class ModModelsProvider extends FabricModelProvider{
         // 生成models\block\blade_nightfall_block.json
         // 生成models\item\blade_nightfall_block.json
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.Blade_nightfall_block);
+
+        blockStateModelGenerator.registerSimpleState(ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK);
     }
 
     @Override

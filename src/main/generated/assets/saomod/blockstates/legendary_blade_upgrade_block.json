@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "saomod:block/legendary_blade_upgrade_block"
+    }
+  }
+}

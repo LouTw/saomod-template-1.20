@@ -3,7 +3,7 @@
     "item.saomod.blade_sunrise" : "日出剑",
     "item.saomod.blade_sunrise_helmet" : "日出头盔",
     "item.saomod.blade_sunrise_chestplate" : "日出胸甲",
-    "item.saomod.blade_sunrise_leggins" : "日出腿甲",
+    "item.saomod.blade_sunrise_leggings" : "日出腿甲",
     "item.saomod.blade_sunrise_boots" : "日出靴",
     "item.saomod.blade_nightfall_pickaxe" : "夜落稿",
     "block.saomod.blade_nightfall_block" : "夜落剑方块",
@@ -14,5 +14,6 @@
     "blade_nightfall_block_hit": "夜落剑方块击打声音",
     "blade_nightfall_block_place": "夜落剑方块放置声音",
     "blade_nightfall_block_step": "夜落剑方块行走声音",
+    "block.saomod.legendary_blade_upgrade_block":"传说剑升级台",
     "itemGroup.sao_group" : "刀剑神域"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "saomod:item/blade_nightfall_pickaxe"
+  }
+}

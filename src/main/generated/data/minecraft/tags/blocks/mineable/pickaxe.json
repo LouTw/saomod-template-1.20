@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "saomod:blade_nightfall_block",
+    "saomod:legendary_blade_upgrade_block",
+    "#minecraft:diamond_ores"
+  ]
+}

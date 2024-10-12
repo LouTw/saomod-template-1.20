@@ -73,15 +73,15 @@ public class LegendaryBladeUpgradeBlockScreenHandler extends ScreenHandler{
     }
 
     private void addPlayerInventory(PlayerInventory playerInventory){
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
+        for(int i=0; i<3; ++i){
+            for(int j=0; j<9; ++j){
                 this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory){
-        for(int i=0; i<9; i++){
+        for(int i=0; i<9; ++i){
             this.addSlot(new Slot(playerInventory, i ,8 + i * 18, 142));
         }
     }
@@ -95,7 +95,7 @@ public class LegendaryBladeUpgradeBlockScreenHandler extends ScreenHandler{
         int maxProgress = this.propertyDelegate.get(1);
         int progressArrowSize = 26;
 
-        return maxProgress != 0 && progress !=0 ? progressArrowSize / maxProgress : 0;
+        return maxProgress != 0 && progress !=0 ? progress * progressArrowSize / maxProgress : 0;
     }
 
 }
