@@ -50,5 +50,6 @@ public class SAOMod implements ModInitializer {
 
 		 // 自定义世界生成
 		 ModWorldGeneration.generateModWorldGen();	
+		 ModWorldGeneration.registerChunkGenerators();
 	}
 }

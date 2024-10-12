@@ -85,7 +85,7 @@ public class ModBiomes {
 
         // 调用全局主世界生成设置
         globalOverworldGeneration(biomeBuilder);     
-
+        
         // 构建并返回生物群系
         return new Biome.Builder()
                 .precipitation(true)
