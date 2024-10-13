@@ -6,6 +6,7 @@ import net.minecraft.client.sound.MusicType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -19,6 +20,8 @@ import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.gen.structure.StructureKeys;
 
 public class ModBiomes {
 
@@ -34,11 +37,11 @@ public class ModBiomes {
     // 配置主世界生成设置的方法
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
         // 添加地形雕刻器（如洞穴和峡谷）
-        DefaultBiomeFeatures.addLandCarvers(builder);
+        //DefaultBiomeFeatures.addLandCarvers(builder);
         // 添加紫水晶晶洞
-        DefaultBiomeFeatures.addAmethystGeodes(builder);
+        //DefaultBiomeFeatures.addAmethystGeodes(builder);
         // 添加地牢
-        DefaultBiomeFeatures.addDungeons(builder);
+        //DefaultBiomeFeatures.addDungeons(builder);
         // 添加可开采资源（如煤矿等）
         DefaultBiomeFeatures.addMineables(builder);
         // 添加泉水
@@ -46,7 +49,7 @@ public class ModBiomes {
         // 添加冻结顶层（如冰雪覆盖的地表）
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
         // 添加苔藓岩石
-        DefaultBiomeFeatures.addMossyRocks(builder);
+        //DefaultBiomeFeatures.addMossyRocks(builder);
         // 添加默认的矿石
         DefaultBiomeFeatures.addDefaultOres(builder);
         // 添加植被装饰（如平原树木）
@@ -83,9 +86,11 @@ public class ModBiomes {
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
+
         // 调用全局主世界生成设置
         globalOverworldGeneration(biomeBuilder);     
-        
+
+
         // 构建并返回生物群系
         return new Biome.Builder()
                 .precipitation(true)
