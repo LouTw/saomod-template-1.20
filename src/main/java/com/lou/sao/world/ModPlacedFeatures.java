@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> END_BLADE_NIGHTFALL_BLOCK_PLACED_KEY = registerKey("end_blade_nightfall_block");
 
-    public static void boostrap(Registerable<PlacedFeature> context){
+    public static void bootstrap(Registerable<PlacedFeature> context){
         var ConfiguredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, BLADE_NIGHTFALL_BLOCK_PLACED_KEY

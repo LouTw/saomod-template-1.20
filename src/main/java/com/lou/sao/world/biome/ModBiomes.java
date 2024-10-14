@@ -27,7 +27,7 @@ public class ModBiomes {
             new Identifier(SAOMod.MOD_ID,"initial_town"));
 
     // 注册生物群系的方法        
-    public static void boostrap(Registerable<Biome> context){
+    public static void bootstrap(Registerable<Biome> context){
         context.register(INITIAL_TOWN,initialtownBiome(context));
     }
 

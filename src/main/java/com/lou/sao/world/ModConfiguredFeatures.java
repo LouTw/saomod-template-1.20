@@ -27,7 +27,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?,?>> END_BLADE_NIGHTFALL_BLOCK_KEY = registerKey("end_blade_nightfall_block");
 
-    public static void boostrap(Registerable<ConfiguredFeature<?,?>> context){
+    public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context){
         RuleTest stonePlace = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES); // 浅层生成
         RuleTest deepslatePlace = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES); // 深层生成
         RuleTest netherPlace = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER); // 地狱生成

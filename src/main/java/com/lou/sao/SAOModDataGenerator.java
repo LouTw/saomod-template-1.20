@@ -10,6 +10,9 @@ import com.lou.sao.datagen.ModWorldGenerator;
 import com.lou.sao.world.ModConfiguredFeatures;
 import com.lou.sao.world.ModPlacedFeatures;
 import com.lou.sao.world.biome.ModBiomes;
+import com.lou.sao.world.gen.ModStructure.ModStructurePools;
+import com.lou.sao.world.gen.ModStructure.ModStructureSets;
+import com.lou.sao.world.gen.ModStructure.ModStructures;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -33,8 +36,11 @@ public class SAOModDataGenerator implements DataGeneratorEntrypoint {
 
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
-		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
-		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
-		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ModStructurePools::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, ModStructureSets::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ModStructures::bootstrap);
 	}
 }
