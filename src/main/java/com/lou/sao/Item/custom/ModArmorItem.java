@@ -1,6 +1,8 @@
 package com.lou.sao.Item.custom;
 
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
@@ -17,11 +19,13 @@ import net.minecraft.world.World;
 
 public class ModArmorItem extends ArmorItem{
 
-    // 注册一个盔甲套装效果，判断当穿戴整套的BLADE_SUNRISE材质时，获得：1.效果种类（此处为幸运）2.持续时间TICK（SECONDS = TICK/20）
-    public static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_STATUS_EFFECT_INSTANCE_MAP =
-        (new ImmutableMap.Builder<ArmorMaterial,StatusEffectInstance>()
-        .put(ModArmorMaterial.BLADE_SUNRISE,new StatusEffectInstance(StatusEffects.LUCK,1000,1
-        ,false,false,true))).build();
+    // 注册一个盔甲套装效果（可以叠加多个效果），判断当穿戴整套的BLADE_SUNRISE材质时，获得：1.效果种类（此处为幸运）2.持续时间TICK（SECONDS = TICK/20）
+    public static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_STATUS_EFFECT_INSTANCE_MAP =
+        (new ImmutableMap.Builder<ArmorMaterial,List<StatusEffectInstance>>()
+        .put(ModArmorMaterial.BLADE_SUNRISE,
+        Arrays.asList(new StatusEffectInstance(StatusEffects.LUCK,1000,1,false,false,true)
+        ,new StatusEffectInstance(StatusEffects.HEALTH_BOOST,1000,1,false,false,true) //如需叠加多个效果，像此处一样继续添加
+        ))).build();
 
     public ModArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
@@ -40,12 +44,14 @@ public class ModArmorItem extends ArmorItem{
     }
 
     private void evaluateArmorEffects(PlayerEntity player) {
-        for(Map.Entry<ArmorMaterial,StatusEffectInstance> entry : MATERIAL_STATUS_EFFECT_INSTANCE_MAP.entrySet()){
+        for(Map.Entry<ArmorMaterial,List<StatusEffectInstance>> entry : MATERIAL_STATUS_EFFECT_INSTANCE_MAP.entrySet()){
             ArmorMaterial armorMaterial = entry.getKey();
-            StatusEffectInstance statusEffectInstance = entry.getValue();
+            List<StatusEffectInstance> statusEffectInstance = entry.getValue();
 
             if(hasCorrectArmorOn(armorMaterial,player)){
-                addStatusEffectForMaterial(player,armorMaterial,statusEffectInstance);
+                for(StatusEffectInstance effectInstance:statusEffectInstance){
+                    addStatusEffectForMaterial(player,armorMaterial,effectInstance);
+                }
             }
         }
     }
