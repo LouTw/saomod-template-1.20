@@ -19,25 +19,34 @@ import com.mojang.datafixers.util.Pair;
 
 
 public class InitialTownGenerator {
+	// 定义一个常量，表示城市中心的结构池注册键
     public static final RegistryKey<StructurePool> CITY_CENTER = StructurePools.of("initial_town/city_center");
 
+	// 初始化方法，用于注册结构池
 	public static void bootstrap(Registerable<StructurePool> poolRegisterable) {
+		// 获取处理列表的注册表查找对象
 		RegistryEntryLookup<StructureProcessorList> registryEntryLookup = poolRegisterable.getRegistryLookup(RegistryKeys.PROCESSOR_LIST);
+		// 获取特定的处理列表注册条目
 		RegistryEntry<StructureProcessorList> registryEntry = registryEntryLookup.getOrThrow(ModStructureProcessorLists.INITIAL_TOWN_START_DEGRADATION);
+		// 获取模板池的注册表查找对象
 		RegistryEntryLookup<StructurePool> registryEntryLookup2 = poolRegisterable.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
+		// 获取空的结构池注册条目
 		RegistryEntry<StructurePool> registryEntry2 = registryEntryLookup2.getOrThrow(StructurePools.EMPTY);
+		// 注册城市中心的结构池
 		poolRegisterable.register(
 			CITY_CENTER,
 			new StructurePool(
-				registryEntry2,
+				registryEntry2, // 父结构池
 				ImmutableList.of(
+					// 添加多个结构池元素，每个元素都有一个处理列表
 					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_1", registryEntry), 1),
 					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_2", registryEntry), 1),
 					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_3", registryEntry), 1)
 				),
-				StructurePool.Projection.RIGID
+				StructurePool.Projection.RIGID // 设置结构池的投影类型为刚性
 			)
 		);
+		// 调用外围生成器的初始化方法
 		InitialTownOutskirtsGenerator.bootstrap(poolRegisterable);
 	}
 }

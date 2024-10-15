@@ -16,20 +16,29 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
 public class InitialTownOutskirtsGenerator {
+	// 初始化方法，用于注册结构池
     public static void bootstrap(Registerable<StructurePool> poolRegisterable) {
+		// 获取放置特征的注册表查找对象
 		RegistryEntryLookup<PlacedFeature> registryEntryLookup = poolRegisterable.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
+		// 获取特定的放置特征注册条目
 		RegistryEntry<PlacedFeature> registryEntry = registryEntryLookup.getOrThrow(UndergroundPlacedFeatures.SCULK_PATCH_ANCIENT_CITY);
+		// 获取处理器列表的注册表查找对象
 		RegistryEntryLookup<StructureProcessorList> registryEntryLookup2 = poolRegisterable.getRegistryLookup(RegistryKeys.PROCESSOR_LIST);
+		// 获取特定的处理列表注册条目
 		RegistryEntry<StructureProcessorList> registryEntry2 = registryEntryLookup2.getOrThrow(ModStructureProcessorLists.INITIAL_TOWN_GENERIC_DEGRADATION);
 		RegistryEntry<StructureProcessorList> registryEntry3 = registryEntryLookup2.getOrThrow(ModStructureProcessorLists.INITIAL_TOWN_WALLS_DEGRADATION);
+		// 获取模板池的注册表查找对象
 		RegistryEntryLookup<StructurePool> registryEntryLookup3 = poolRegisterable.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
+		// 获取空的结构池注册条目
 		RegistryEntry<StructurePool> registryEntry4 = registryEntryLookup3.getOrThrow(StructurePools.EMPTY);
+		// 注册初始城镇外围的结构池
 		StructurePools.register(
 			poolRegisterable,
 			"initial_town/structures",
 			new StructurePool(
-				registryEntry4,
+				registryEntry4, // 父结构池
 				ImmutableList.of(
+					// 添加多个结构池元素，每个元素都有一个处理列表
 					Pair.of(StructurePoolElement.ofEmpty(), 7),
 					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/barracks", registryEntry2), 4),
 					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/chamber_1", registryEntry2), 4),

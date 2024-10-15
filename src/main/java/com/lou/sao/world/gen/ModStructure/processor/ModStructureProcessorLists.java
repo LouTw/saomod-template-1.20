@@ -22,21 +22,26 @@ import net.minecraft.structure.rule.RandomBlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 
 public class ModStructureProcessorLists {
+	// 定义处理列表的注册键
     public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_START_DEGRADATION = registerKey("initial_town_start_degradation");
     public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_GENERIC_DEGRADATION = registerKey("initial_town_generic_degradation");
     public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_WALLS_DEGRADATION = registerKey("initial_town_walls_degradation");
 	
+	// 注册处理列表的注册键
 	public static RegistryKey<StructureProcessorList> registerKey(String name){
         return RegistryKey.of(RegistryKeys.PROCESSOR_LIST,new Identifier(SAOMod.MOD_ID,name));
     }
 	
+	// 注册处理列表
 	private static void register(
 		Registerable<StructureProcessorList> processorListRegisterable, RegistryKey<StructureProcessorList> key, List<StructureProcessor> processors
 	) {
 		processorListRegisterable.register(key, new StructureProcessorList(processors));
 	}
 
+	// 初始化方法，用于注册所有处理列表
 	public static void bootstrap(Registerable<StructureProcessorList> processorListRegisterable) {
+		// 注册初始初始城镇处理列表
 		RegistryEntryLookup<Block> registryEntryLookup = processorListRegisterable.getRegistryLookup(RegistryKeys.BLOCK);
 		register(
             processorListRegisterable,

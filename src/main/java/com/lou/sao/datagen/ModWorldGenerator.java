@@ -19,11 +19,15 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider{
         return "World Gen";
     }
 
+    // 配置方法，用于将注册表中的条目添加到数据生成器的条目列表中
     @Override
     protected void configure(WrapperLookup registries, Entries entries) {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.TEMPLATE_POOL));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PROCESSOR_LIST));
+
     }
 
 }
