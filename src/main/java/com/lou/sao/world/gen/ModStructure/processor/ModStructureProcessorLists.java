@@ -1,7 +1,7 @@
 package com.lou.sao.world.gen.ModStructure.processor;
 
 import java.util.List;
-
+import com.lou.sao.SAOMod;
 import com.google.common.collect.ImmutableList;
 
 import net.minecraft.block.Block;
@@ -22,14 +22,14 @@ import net.minecraft.structure.rule.RandomBlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 
 public class ModStructureProcessorLists {
-    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_START_DEGRADATION = of("intial_town_start_degradation");
-    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_GENERIC_DEGRADATION = of("intial_town_generic_degradation");
-    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_WALLS_DEGRADATION = of("intial_town_walls_degradation");
-
-    private static RegistryKey<StructureProcessorList> of(String id) {
-		return RegistryKey.of(RegistryKeys.PROCESSOR_LIST, new Identifier(id));
-	}
-
+    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_START_DEGRADATION = registerKey("initial_town_start_degradation");
+    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_GENERIC_DEGRADATION = registerKey("initial_town_generic_degradation");
+    public static final RegistryKey<StructureProcessorList> INITIAL_TOWN_WALLS_DEGRADATION = registerKey("initial_town_walls_degradation");
+	
+	public static RegistryKey<StructureProcessorList> registerKey(String name){
+        return RegistryKey.of(RegistryKeys.PROCESSOR_LIST,new Identifier(SAOMod.MOD_ID,name));
+    }
+	
 	private static void register(
 		Registerable<StructureProcessorList> processorListRegisterable, RegistryKey<StructureProcessorList> key, List<StructureProcessor> processors
 	) {

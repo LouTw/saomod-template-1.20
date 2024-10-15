@@ -26,46 +26,46 @@ public class InitialTownOutskirtsGenerator {
 		RegistryEntry<StructurePool> registryEntry4 = registryEntryLookup3.getOrThrow(StructurePools.EMPTY);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/structures",
+			"initial_town/structures",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
 					Pair.of(StructurePoolElement.ofEmpty(), 7),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/barracks", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/chamber_1", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/chamber_2", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/chamber_3", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/sauna_1", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/small_statue", registryEntry2), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/large_ruin_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/tall_ruin_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/tall_ruin_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/tall_ruin_3", registryEntry2), 2),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/tall_ruin_4", registryEntry2), 2),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/barracks", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/chamber_1", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/chamber_2", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/chamber_3", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/sauna_1", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/small_statue", registryEntry2), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/large_ruin_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/tall_ruin_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/tall_ruin_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/tall_ruin_3", registryEntry2), 2),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/tall_ruin_4", registryEntry2), 2),
 					Pair.of(
 						StructurePoolElement.ofList(
 							ImmutableList.of(
-								StructurePoolElement.ofProcessedSingle("intial_town/structures/camp_1", registryEntry2),
-								StructurePoolElement.ofProcessedSingle("intial_town/structures/camp_2", registryEntry2),
-								StructurePoolElement.ofProcessedSingle("intial_town/structures/camp_3", registryEntry2)
+								StructurePoolElement.ofProcessedSingle("initial_town/structures/camp_1", registryEntry2),
+								StructurePoolElement.ofProcessedSingle("initial_town/structures/camp_2", registryEntry2),
+								StructurePoolElement.ofProcessedSingle("initial_town/structures/camp_3", registryEntry2)
 							)
 						),
 						1
 					),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/medium_ruin_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/medium_ruin_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/small_ruin_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/small_ruin_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/large_pillar_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/structures/medium_pillar_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofList(ImmutableList.of(StructurePoolElement.ofSingle("intial_town/structures/ice_box_1"))), 1)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/medium_ruin_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/medium_ruin_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/small_ruin_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/small_ruin_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/large_pillar_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/structures/medium_pillar_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofList(ImmutableList.of(StructurePoolElement.ofSingle("initial_town/structures/ice_box_1"))), 1)
 				),
 				StructurePool.Projection.RIGID
 			)
 		);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/sculk",
+			"initial_town/sculk",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(Pair.of(StructurePoolElement.ofFeature(registryEntry), 6), Pair.of(StructurePoolElement.ofEmpty(), 1)),
@@ -74,80 +74,80 @@ public class InitialTownOutskirtsGenerator {
 		);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/walls",
+			"initial_town/walls",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_corner_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_intersection_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_lshape_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_2", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_2", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_3", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_4", registryEntry3), 4),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_passage_1", registryEntry3), 3),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_corner_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_corner_wall_2", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_horizontal_wall_stairs_1", registryEntry3), 2),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_horizontal_wall_stairs_2", registryEntry3), 2),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_horizontal_wall_stairs_3", registryEntry3), 3),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/ruined_horizontal_wall_stairs_4", registryEntry3), 3)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_corner_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_intersection_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_lshape_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_2", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_2", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_3", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_4", registryEntry3), 4),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_passage_1", registryEntry3), 3),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_corner_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_corner_wall_2", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_horizontal_wall_stairs_1", registryEntry3), 2),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_horizontal_wall_stairs_2", registryEntry3), 2),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_horizontal_wall_stairs_3", registryEntry3), 3),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/ruined_horizontal_wall_stairs_4", registryEntry3), 3)
 				),
 				StructurePool.Projection.RIGID
 			)
 		);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/walls/no_corners",
+			"initial_town/walls/no_corners",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_2", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_1", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_2", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_3", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_4", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_stairs_5", registryEntry3), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/walls/intact_horizontal_wall_bridge", registryEntry3), 1)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_2", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_1", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_2", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_3", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_4", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_stairs_5", registryEntry3), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/walls/intact_horizontal_wall_bridge", registryEntry3), 1)
 				),
 				StructurePool.Projection.RIGID
 			)
 		);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/city_center/walls",
+			"initial_town/city_center/walls",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/bottom_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/bottom_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/bottom_left_corner", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/bottom_right_corner_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/bottom_right_corner_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/left", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/right", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/top", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/top_right_corner", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/walls/top_left_corner", registryEntry2), 1)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/bottom_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/bottom_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/bottom_left_corner", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/bottom_right_corner_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/bottom_right_corner_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/left", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/right", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/top", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/top_right_corner", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/walls/top_left_corner", registryEntry2), 1)
 				),
 				StructurePool.Projection.RIGID
 			)
 		);
 		StructurePools.register(
 			poolRegisterable,
-			"intial_town/city/entrance",
+			"initial_town/city/entrance",
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_connector", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_path_1", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_path_2", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_path_3", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_path_4", registryEntry2), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city/entrance/entrance_path_5", registryEntry2), 1)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_connector", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_path_1", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_path_2", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_path_3", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_path_4", registryEntry2), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city/entrance/entrance_path_5", registryEntry2), 1)
 				),
 				StructurePool.Projection.RIGID
 			)

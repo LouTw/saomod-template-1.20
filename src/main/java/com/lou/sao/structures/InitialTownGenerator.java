@@ -19,7 +19,7 @@ import com.mojang.datafixers.util.Pair;
 
 
 public class InitialTownGenerator {
-    public static final RegistryKey<StructurePool> CITY_CENTER = StructurePools.of("intial_town/city_center");
+    public static final RegistryKey<StructurePool> CITY_CENTER = StructurePools.of("initial_town/city_center");
 
 	public static void bootstrap(Registerable<StructurePool> poolRegisterable) {
 		RegistryEntryLookup<StructureProcessorList> registryEntryLookup = poolRegisterable.getRegistryLookup(RegistryKeys.PROCESSOR_LIST);
@@ -31,9 +31,9 @@ public class InitialTownGenerator {
 			new StructurePool(
 				registryEntry2,
 				ImmutableList.of(
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/city_center_1", registryEntry), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/city_center_2", registryEntry), 1),
-					Pair.of(StructurePoolElement.ofProcessedSingle("intial_town/city_center/city_center_3", registryEntry), 1)
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_1", registryEntry), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_2", registryEntry), 1),
+					Pair.of(StructurePoolElement.ofProcessedSingle("initial_town/city_center/city_center_3", registryEntry), 1)
 				),
 				StructurePool.Projection.RIGID
 			)
