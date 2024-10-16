@@ -2,6 +2,7 @@ package com.lou.sao.structures;
 
 import com.google.common.collect.ImmutableList;
 import com.lou.sao.SAOMod;
+import com.lou.sao.world.gen.ModStructure.ModStructurePools;
 import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.registry.Registerable;
@@ -11,15 +12,20 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
-import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.structure.processor.StructureProcessorList;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
 public class InitialTownOutskirtsGenerator {
+	
 	// 定义一个常量，表示城市中心的结构池注册键
-    public static final RegistryKey<StructurePool> CITY_Outskirts = registerKey("initial_town/city_outskirts");
+    public static final RegistryKey<StructurePool> CITY_Structures = registerKey("initial_town/structures");
+	public static final RegistryKey<StructurePool> CITY_Sculk = registerKey("initial_town/sculk");
+	public static final RegistryKey<StructurePool> CITY_Walls = registerKey("initial_town/walls");
+	public static final RegistryKey<StructurePool> CITY_No_Corners = registerKey("initial_town/walls/no_corners");
+	public static final RegistryKey<StructurePool> CITY_Center_Walls = registerKey("initial_town/city_center/walls");
+	public static final RegistryKey<StructurePool> CITY_Entrance = registerKey("initial_town/city/entrance");
 
 	// 注册处理列表的注册键
 	public static RegistryKey<StructurePool> registerKey(String name){
@@ -40,11 +46,10 @@ public class InitialTownOutskirtsGenerator {
 		// 获取模板池的注册表查找对象
 		RegistryEntryLookup<StructurePool> registryEntryLookup3 = poolRegisterable.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
 		// 获取空的结构池注册条目
-		RegistryEntry<StructurePool> registryEntry4 = registryEntryLookup3.getOrThrow(StructurePools.EMPTY);
+		RegistryEntry<StructurePool> registryEntry4 = registryEntryLookup3.getOrThrow(ModStructurePools.EMPTY);
 		// 注册初始城镇外围的结构池
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/structures",
+		poolRegisterable.register(
+			CITY_Structures,
 			new StructurePool(
 				registryEntry4, // 父结构池
 				ImmutableList.of(
@@ -82,18 +87,16 @@ public class InitialTownOutskirtsGenerator {
 				StructurePool.Projection.RIGID
 			)
 		);
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/sculk",
+		poolRegisterable.register(
+			CITY_Sculk,
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(Pair.of(StructurePoolElement.ofFeature(registryEntry), 6), Pair.of(StructurePoolElement.ofEmpty(), 1)),
 				StructurePool.Projection.RIGID
 			)
 		);
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/walls",
+		poolRegisterable.register(
+			CITY_Walls,
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
@@ -117,9 +120,8 @@ public class InitialTownOutskirtsGenerator {
 				StructurePool.Projection.RIGID
 			)
 		);
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/walls/no_corners",
+		poolRegisterable.register(
+			CITY_No_Corners,
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
@@ -135,9 +137,8 @@ public class InitialTownOutskirtsGenerator {
 				StructurePool.Projection.RIGID
 			)
 		);
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/city_center/walls",
+		poolRegisterable.register(
+			CITY_Center_Walls,
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(
@@ -155,9 +156,8 @@ public class InitialTownOutskirtsGenerator {
 				StructurePool.Projection.RIGID
 			)
 		);
-		StructurePools.register(
-			poolRegisterable,
-			"initial_town/city/entrance",
+		poolRegisterable.register(
+			CITY_Entrance,
 			new StructurePool(
 				registryEntry4,
 				ImmutableList.of(

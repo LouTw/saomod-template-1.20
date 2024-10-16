@@ -6,6 +6,7 @@ package com.lou.sao.structures;
 
 import com.google.common.collect.ImmutableList;
 import com.lou.sao.SAOMod;
+import com.lou.sao.world.gen.ModStructure.ModStructurePools;
 import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
@@ -14,7 +15,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
-import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.structure.processor.StructureProcessorList;
 import net.minecraft.util.Identifier;
 import com.mojang.datafixers.util.Pair;
@@ -39,7 +39,7 @@ public class InitialTownGenerator {
 		// 获取模板池的注册表查找对象
 		RegistryEntryLookup<StructurePool> registryEntryLookup2 = poolRegisterable.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
 		// 获取空的结构池注册条目
-		RegistryEntry<StructurePool> registryEntry2 = registryEntryLookup2.getOrThrow(StructurePools.EMPTY);
+		RegistryEntry<StructurePool> registryEntry2 = registryEntryLookup2.getOrThrow(ModStructurePools.EMPTY);
 		// 注册城市中心的结构池
 		poolRegisterable.register(
 			CITY_CENTER,
@@ -54,6 +54,7 @@ public class InitialTownGenerator {
 				StructurePool.Projection.RIGID // 设置结构池的投影类型为刚性
 			)
 		);
+		InitialTownOutskirtsGenerator.bootstrap(poolRegisterable);
 	}
 }
 

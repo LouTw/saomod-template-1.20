@@ -1,0 +1,208 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 7
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/barracks",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/chamber_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/chamber_2",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/chamber_3",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/sauna_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/small_statue",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/large_ruin_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/tall_ruin_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/tall_ruin_2",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/tall_ruin_3",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/tall_ruin_4",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "location": "minecraft:initial_town/structures/camp_1",
+            "processors": "saomod:initial_town_generic_degradation",
+            "projection": "rigid"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "location": "minecraft:initial_town/structures/camp_2",
+            "processors": "saomod:initial_town_generic_degradation",
+            "projection": "rigid"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "location": "minecraft:initial_town/structures/camp_3",
+            "processors": "saomod:initial_town_generic_degradation",
+            "projection": "rigid"
+          }
+        ],
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/medium_ruin_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/medium_ruin_2",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/small_ruin_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/small_ruin_2",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/large_pillar_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:initial_town/structures/medium_pillar_1",
+        "processors": "saomod:initial_town_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "location": "minecraft:initial_town/structures/ice_box_1",
+            "processors": {
+              "processors": []
+            },
+            "projection": "rigid"
+          }
+        ],
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "saomod:empty"
+}
