@@ -2,9 +2,11 @@ package com.lou.sao.structures;
 
 
 
-import com.google.common.collect.ImmutableList;
-import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 
+
+import com.google.common.collect.ImmutableList;
+import com.lou.sao.SAOMod;
+import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -14,13 +16,19 @@ import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.structure.processor.StructureProcessorList;
+import net.minecraft.util.Identifier;
 import com.mojang.datafixers.util.Pair;
 
 
 
 public class InitialTownGenerator {
 	// 定义一个常量，表示城市中心的结构池注册键
-    public static final RegistryKey<StructurePool> CITY_CENTER = StructurePools.of("initial_town/city_center");
+    public static final RegistryKey<StructurePool> CITY_CENTER = registerKey("initial_town/city_center");
+
+	// 注册处理列表的注册键
+	public static RegistryKey<StructurePool> registerKey(String name){
+        return RegistryKey.of(RegistryKeys.TEMPLATE_POOL,new Identifier(SAOMod.MOD_ID,name));
+    }
 
 	// 初始化方法，用于注册结构池
 	public static void bootstrap(Registerable<StructurePool> poolRegisterable) {
@@ -46,8 +54,6 @@ public class InitialTownGenerator {
 				StructurePool.Projection.RIGID // 设置结构池的投影类型为刚性
 			)
 		);
-		// 调用外围生成器的初始化方法
-		InitialTownOutskirtsGenerator.bootstrap(poolRegisterable);
 	}
 }
 

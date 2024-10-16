@@ -7,10 +7,10 @@ import com.lou.sao.datagen.ModModelsProvider;
 import com.lou.sao.datagen.ModPoiTagsProvider;
 import com.lou.sao.datagen.ModRecipesProvider;
 import com.lou.sao.datagen.ModWorldGenerator;
+import com.lou.sao.structures.InitialTownGenerator;
 import com.lou.sao.world.ModConfiguredFeatures;
 import com.lou.sao.world.ModPlacedFeatures;
 import com.lou.sao.world.biome.ModBiomes;
-import com.lou.sao.world.gen.ModStructure.ModStructurePools;
 import com.lou.sao.world.gen.ModStructure.ModStructureSets;
 import com.lou.sao.world.gen.ModStructure.ModStructures;
 import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
@@ -18,7 +18,6 @@ import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
 public class SAOModDataGenerator implements DataGeneratorEntrypoint {
@@ -41,7 +40,7 @@ public class SAOModDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
-		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ModStructurePools::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, InitialTownGenerator::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, ModStructureSets::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ModStructures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PROCESSOR_LIST, ModStructureProcessorLists::bootstrap);

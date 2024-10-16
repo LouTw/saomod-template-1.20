@@ -5,12 +5,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.lou.sao.SAOMod;
 import com.lou.sao.structures.InitialTownGenerator;
 import com.lou.sao.world.biome.ModBiomes;
 
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.structure.pool.StructurePool;
@@ -27,6 +29,13 @@ import net.minecraft.world.gen.structure.Structure;
 
 
 public class ModStructures {
+	public static final RegistryKey<Structure> INITIAL_TOWN_STRUCTURE = registerKey("initial_town_structure");
+
+	// 注册处理列表的注册键
+	public static RegistryKey<Structure> registerKey(String name){
+        return RegistryKey.of(RegistryKeys.STRUCTURE,new Identifier(SAOMod.MOD_ID,name));
+    }
+
 	// 创建结构配置的方法，包含生物群系、生成步骤和地形适应性
     private static Structure.Config createConfig(
 		RegistryEntryList<Biome> biomes, Map<SpawnGroup, StructureSpawns> spawns, GenerationStep.Feature featureStep, StructureTerrainAdaptation terrainAdaptation
@@ -50,7 +59,7 @@ public class ModStructures {
         RegistryEntryLookup<StructurePool> registryEntryLookup2 = structureRegisterable.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
 		// 注册初始城镇结构
         structureRegisterable.register(
-			ModStructureKeys.INITIAL_TOWN_STRUCTURE,
+			INITIAL_TOWN_STRUCTURE,
 			new JigsawStructure(
 				createConfig(
 					RegistryEntryList.of(registryEntryLookup.getOrThrow(ModBiomes.INITIAL_TOWN)), // 使用INITIAL_TOWN生物群系

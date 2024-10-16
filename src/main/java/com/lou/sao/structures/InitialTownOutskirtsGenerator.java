@@ -1,21 +1,31 @@
 package com.lou.sao.structures;
 
 import com.google.common.collect.ImmutableList;
+import com.lou.sao.SAOMod;
 import com.lou.sao.world.gen.ModStructure.processor.ModStructureProcessorLists;
 import com.mojang.datafixers.util.Pair;
-
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.structure.processor.StructureProcessorList;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
 public class InitialTownOutskirtsGenerator {
+	// 定义一个常量，表示城市中心的结构池注册键
+    public static final RegistryKey<StructurePool> CITY_Outskirts = registerKey("initial_town/city_outskirts");
+
+	// 注册处理列表的注册键
+	public static RegistryKey<StructurePool> registerKey(String name){
+        return RegistryKey.of(RegistryKeys.TEMPLATE_POOL,new Identifier(SAOMod.MOD_ID,name));
+    }
+
 	// 初始化方法，用于注册结构池
     public static void bootstrap(Registerable<StructurePool> poolRegisterable) {
 		// 获取放置特征的注册表查找对象
