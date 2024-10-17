@@ -73,7 +73,7 @@ public class ModStructures {
                       BURY:结构会被部分埋入地下。适用于需要部分隐藏在地形中的结构。 */
 				),
 				registryEntryLookup2.getOrThrow(InitialTownGenerator.CITY_CENTER), // 使用初始城镇中心的模板池
-				Optional.of(new Identifier("city_anchor")),
+				Optional.of(new Identifier("city_center")),
 				7,
 				ConstantHeightProvider.create(YOffset.aboveBottom(0)), // 结构高度为地面上0格
 				false,

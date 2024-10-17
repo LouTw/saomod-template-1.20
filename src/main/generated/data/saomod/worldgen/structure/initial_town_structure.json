@@ -40,7 +40,7 @@
   "start_height": {
     "above_bottom": 0
   },
-  "start_jigsaw_name": "minecraft:city_anchor",
+  "start_jigsaw_name": "minecraft:city_center",
   "start_pool": "saomod:initial_town/city_center",
   "step": "surface_structures",
   "terrain_adaptation": "beard_box",
