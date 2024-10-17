@@ -1,5 +1,5 @@
-// 1.20	2024-10-17T16:47:18.383538	SAOMod/Tags for minecraft:block
-1352343e6e880a8a6aaf1ef80261cf44ff9c26f6 data\minecraft\tags\blocks\needs_diamond_tool.json
+// 1.20	2024-10-17T21:50:32.7190481	SAOMod/Tags for minecraft:block
 55ee6894fe399c5b659b4fa010b772346145ecd9 data\fabric\tags\blocks\needs_tool_level_4.json
-1badd6c371648a7b80bbd60875f320efadecb5d5 data\minecraft\tags\blocks\mineable\pickaxe.json
+1352343e6e880a8a6aaf1ef80261cf44ff9c26f6 data\minecraft\tags\blocks\needs_diamond_tool.json
 1badd6c371648a7b80bbd60875f320efadecb5d5 data\saomod\tags\blocks\modblock_list.json
+1badd6c371648a7b80bbd60875f320efadecb5d5 data\minecraft\tags\blocks\mineable\pickaxe.json
