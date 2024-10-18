@@ -14,6 +14,7 @@ import com.lou.sao.entity.ModEntities;
 import com.lou.sao.entity.custom.WuboEntity;
 import com.lou.sao.screen.ModScreenHandler;
 import com.lou.sao.sounds.ModSounds;
+import com.lou.sao.structures.ModStructures;
 import com.lou.sao.util.ModLootTableModifier;
 import com.lou.sao.util.ModTrades;
 import com.lou.sao.villager.ModVillagers;
@@ -50,5 +51,8 @@ public class SAOMod implements ModInitializer {
 
 		 // 自定义世界生成
 		ModWorldGeneration.generateModWorldGen();	
+
+		// 自定义建筑结构生成
+        ModStructures.registerStructureFeatures();
 	}
 }
