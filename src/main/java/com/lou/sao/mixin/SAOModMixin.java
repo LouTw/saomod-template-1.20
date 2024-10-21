@@ -13,3 +13,4 @@ public class SAOModMixin {
 		// This code is injected into the start of MinecraftServer.loadWorld()V
 	}
 }
+
