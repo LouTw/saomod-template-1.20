@@ -30,15 +30,15 @@ public class ModPlacedFeatures {
         , ConfiguredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BLADE_NIGHTFALL_BLOCK_KEY)
         // 第一次参数“10”表示一个chunk中有多少个矿脉，具体一个矿脉中有多少矿石由ModConfiguredFeatures中定义；
         // 第二个参数表示矿脉在高度-50~80范围内以uniform的方式分布，当然也有其他分布方式
-        , ModOrePlacement.modifiersWithCount(10, HeightRangePlacementModifier.uniform(YOffset.fixed(-50), YOffset.fixed(80))));
+        , ModOrePlacement.modifiersWithCount(1, HeightRangePlacementModifier.uniform(YOffset.fixed(-10), YOffset.fixed(10))));
 
         register(context, NETHER_BLADE_NIGHTFALL_BLOCK_PLACED_KEY
         , ConfiguredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_BLADE_NIGHTFALL_BLOCK_KEY)
-        , ModOrePlacement.modifiersWithCount(10, HeightRangePlacementModifier.uniform(YOffset.fixed(-50), YOffset.fixed(80))));
+        , ModOrePlacement.modifiersWithCount(1, HeightRangePlacementModifier.uniform(YOffset.fixed(-10), YOffset.fixed(10))));
 
         register(context, END_BLADE_NIGHTFALL_BLOCK_PLACED_KEY
         , ConfiguredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_BLADE_NIGHTFALL_BLOCK_KEY)
-        , ModOrePlacement.modifiersWithCount(10, HeightRangePlacementModifier.uniform(YOffset.fixed(-50), YOffset.fixed(80))));
+        , ModOrePlacement.modifiersWithCount(1, HeightRangePlacementModifier.uniform(YOffset.fixed(-10), YOffset.fixed(10))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name){

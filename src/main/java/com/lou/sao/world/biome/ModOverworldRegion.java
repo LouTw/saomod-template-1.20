@@ -37,10 +37,10 @@ public class ModOverworldRegion extends Region {
         mapper.accept(Pair.of(MultiNoiseUtil.createNoiseHypercube(
             MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 温度
             MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 湿度
-            MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 大陆性
-            MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 起伏
-            MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 腐蚀
-            MultiNoiseUtil.ParameterRange.of(0.5F, 1.0F), // 峡谷
+            MultiNoiseUtil.ParameterRange.of(0.9F, 1.0F), // 大陆性
+            MultiNoiseUtil.ParameterRange.of(0.9F, 1.0F), // 起伏
+            MultiNoiseUtil.ParameterRange.of(0.9F, 1.0F), // 腐蚀
+            MultiNoiseUtil.ParameterRange.of(0.9F, 1.0F), // 峡谷
             0.0F  // 噪声
     ), ModBiomes.INITIAL_TOWN));
     }

@@ -28,10 +28,10 @@ public class ModMaterialRules {
         return MaterialRules.sequence(
                 // 为特定生物群系定义自定义规则
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.INITIAL_TOWN),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, stonebricksSurface))),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)))
 
                 // 默认规则：在石头深度地板上生成草地表面
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
+                //MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
         );
     }
     /**

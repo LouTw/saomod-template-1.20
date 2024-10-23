@@ -96,12 +96,12 @@ public class ModBiomes {
                 .generationSettings(biomeBuilder.build())       // 设置温度
                 .spawnSettings(spawnBuilder.build())        // 设置生成设置
                 .effects((new BiomeEffects.Builder())       // 设置生物生成设置
-                        .waterColor(0xe82e3b)       // 设置水的颜色
-                        .waterFogColor(0xbf1b26)        // 设置水雾的颜色
-                        .skyColor(0x30c918)     // 设置天空的颜色
-                        .grassColor(0x7f03fc)       // 设置草的颜色
-                        .foliageColor(0xd203fc)     // 设置树叶的颜色
-                        .fogColor(0x22a1e6)     // 设置雾的颜色
+                        .waterColor(0x3F76E4)       // 设置水的颜色
+                        .waterFogColor(0x050533)        // 设置水雾的颜色
+                        .skyColor(0x77ADFF)     // 设置天空的颜色
+                        .grassColor(0x91BD59)       // 设置草的颜色
+                        .foliageColor(0x77AB2F)     // 设置树叶的颜色
+                        .fogColor(0xC0D8FF)     // 设置雾的颜色
                         .moodSound(BiomeMoodSound.CAVE)     // 设置生物群系的环境音效
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundEvents.MUSIC_DISC_11))).build()) // 设置背景音乐
                 .build();
