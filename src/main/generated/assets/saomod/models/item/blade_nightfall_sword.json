@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "saomod:item/blade_nightfall_sword"
+  }
+}

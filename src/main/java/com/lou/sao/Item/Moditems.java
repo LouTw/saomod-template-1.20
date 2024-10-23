@@ -10,6 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -23,7 +24,10 @@ public class Moditems {
     
     // 注册一个新工具（稿子），名称是Blade_NightFall_pickaxe
     public static final Item Blade_NightFall_pickaxe = registerItems("blade_nightfall_pickaxe"
-    ,new PickaxeItem(ModToolMaterial.BLADE_NIGHTFALL,2,2f,new FabricItemSettings()));
+    ,new PickaxeItem(ModToolMaterial.BLADE_NIGHTFALL,2,1f,new FabricItemSettings()));
+    // 注册一个新剑，名称是Blade_NightFall_Sword
+    public static final Item Blade_NightFall_Sword = registerItems("blade_nightfall_sword"
+    ,new SwordItem(ModToolMaterial.BLADE_NIGHTFALL, 20, 3f, new FabricItemSettings()));
 
     // 注册一个新防具（头盔），名称是Blade_SunRise_Helmet
     public static final Item Blade_SunRise_Helmet = registerItems("blade_sunrise_helmet"

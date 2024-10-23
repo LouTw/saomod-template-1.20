@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -47,6 +48,18 @@ public class ModRecipesProvider extends FabricRecipeProvider{
         .input('#', ModBlocks.Blade_nightfall_block)
         .criterion(hasItem(ModBlocks.Blade_nightfall_block), conditionsFromItem(ModBlocks.Blade_nightfall_block))
         .offerTo(exporter,new Identifier("blade_nightfall_block_to_blade_nightfall"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK,3)
+        .pattern("!@#")
+        .pattern("$%^")
+        .input('!', Items.NETHERITE_BLOCK)
+        .input('@', Items.DIAMOND_BLOCK)
+        .input('#', Items.IRON_BLOCK)
+        .input('$', Items.COPPER_BLOCK)
+        .input('%', Items.EMERALD_BLOCK)
+        .input('^', Items.REDSTONE_BLOCK)
+        .criterion(hasItem(Items.NETHERITE_BLOCK), conditionsFromItem(Items.NETHERITE_BLOCK))
+        .offerTo(exporter,new Identifier("legendary_blade_upgrade_block"));
     }
 
 }

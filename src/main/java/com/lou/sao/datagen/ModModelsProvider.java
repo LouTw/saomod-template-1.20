@@ -32,9 +32,11 @@ public class ModModelsProvider extends FabricModelProvider{
         // 生成models\item\blade_nightfall.json，例：父类继承generated，此处generated指一般手持模式
         itemModelGenerator.register(Moditems.Blade_NightFall,Models.GENERATED);
         itemModelGenerator.register(Moditems.Blade_SunRise,Models.GENERATED);
+        itemModelGenerator.register(Moditems.Blade_NightFall_Sword,Models.GENERATED);
 
         // 生成models\item\blade_nightfall_pickaxe.json，例父类继承手持物品，此处handheld指手持工具模式
         itemModelGenerator.register(Moditems.Blade_NightFall_pickaxe,Models.HANDHELD);
+        
 
         // 生成models\armor\blade_sunrise_helmet等  
         itemModelGenerator.registerArmor((ArmorItem) Moditems.Blade_SunRise_Helmet);

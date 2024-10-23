@@ -129,9 +129,9 @@ public class LegendaryBladeUpgradeBlockEntity extends BlockEntity implements Ext
     // 重置实体方块内进度
     private void resetProgress(){ this.progress = 0;}
 
-    // 实体方块内制作配方，input_slot对应什么物品，output_slot对应什么物品
+    // 实体方块内制作配方，input_slot对应什么物品，output_slot对应什么物品，之后修改为switch-case
     private void craftItem(){
-        ItemStack result = new ItemStack(Moditems.Blade_NightFall);
+        ItemStack result = new ItemStack(Moditems.Blade_NightFall_Sword);
         this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(),getStack(OUTPUT_SLOT).getCount() + result.getCount()));
         this.removeStack(INPUT_SLOT,1);
     }
@@ -144,9 +144,9 @@ public class LegendaryBladeUpgradeBlockEntity extends BlockEntity implements Ext
 
     // 判断是否有配方表
     private boolean hasRecipe(){
-        ItemStack result = new ItemStack(Moditems.Blade_NightFall);
-        // 判断输入的物品是否为所需物品
-        boolean hasInput = getStack(INPUT_SLOT).getItem() == Moditems.Blade_SunRise;
+        ItemStack result = new ItemStack(Moditems.Blade_NightFall_Sword);
+        // 判断输入的物品是否为所需物品，之后修改为switch-case
+        boolean hasInput = getStack(INPUT_SLOT).getItem() == Moditems.Blade_NightFall_pickaxe;
         
         return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
     }

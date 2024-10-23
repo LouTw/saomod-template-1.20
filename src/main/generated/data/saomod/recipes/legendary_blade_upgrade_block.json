@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "!": {
+      "item": "minecraft:netherite_block"
+    },
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "$": {
+      "item": "minecraft:copper_block"
+    },
+    "%": {
+      "item": "minecraft:emerald_block"
+    },
+    "@": {
+      "item": "minecraft:diamond_block"
+    },
+    "^": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "!@#",
+    "$%^"
+  ],
+  "result": {
+    "count": 3,
+    "item": "saomod:legendary_blade_upgrade_block"
+  },
+  "show_notification": true
+}
