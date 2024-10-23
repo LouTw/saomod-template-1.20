@@ -32,7 +32,7 @@ public class ModTrades {
         ,factories ->{
             factories.add((entity,random) -> new TradeOffer(
                 new ItemStack(ModBlocks.Blade_nightfall_block,999),
-                new ItemStack(Moditems.Blade_NightFall,1),
+                new ItemStack(Moditems.Blade_NightFall_pickaxe,1),
                 1,5,0.05f
             ));
         });

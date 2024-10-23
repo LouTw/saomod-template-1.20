@@ -68,8 +68,8 @@ public class ModBiomes {
 
         // 添加生物生成规则（如狼和村民）
         //spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.WUBO, 2, 3, 5));
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.VILLAGER, 5, 8, 8));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 1, 1, 3));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.VILLAGER, 5, 8, 16));
 
         // 添加默认的农场动物
         DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
