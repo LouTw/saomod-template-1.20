@@ -33,7 +33,8 @@ public class ModModelsProvider extends FabricModelProvider{
         itemModelGenerator.register(Moditems.Blade_NightFall,Models.GENERATED);
         itemModelGenerator.register(Moditems.Blade_SunRise,Models.GENERATED);
         itemModelGenerator.register(Moditems.Blade_NightFall_Sword,Models.GENERATED);
-
+        itemModelGenerator.register(Moditems.Blade_Sunrise_Sword,Models.GENERATED);
+        
         // 生成models\item\blade_nightfall_pickaxe.json，例父类继承手持物品，此处handheld指手持工具模式
         itemModelGenerator.register(Moditems.Blade_NightFall_pickaxe,Models.HANDHELD);
         

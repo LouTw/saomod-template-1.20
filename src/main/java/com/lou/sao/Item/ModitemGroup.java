@@ -27,6 +27,7 @@ public class ModitemGroup {
         entries.add(Moditems.Blade_NightFall_pickaxe);
         // 添加武器
         entries.add(Moditems.Blade_NightFall_Sword);
+        entries.add(Moditems.Blade_Sunrise_Sword);
         // 添加盔甲
         entries.add(Moditems.Blade_SunRise_Helmet);
         entries.add(Moditems.Blade_SunRise_ChestPlate);

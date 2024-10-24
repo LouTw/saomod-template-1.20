@@ -28,6 +28,8 @@ public class Moditems {
     // 注册一个新剑，名称是Blade_NightFall_Sword
     public static final Item Blade_NightFall_Sword = registerItems("blade_nightfall_sword"
     ,new SwordItem(ModToolMaterial.BLADE_NIGHTFALL, 20, 3f, new FabricItemSettings()));
+    public static final Item Blade_Sunrise_Sword = registerItems("blade_sunrise_sword"
+    ,new SwordItem(ModToolMaterial.BLADE_SUNRISE, 20, 3f, new FabricItemSettings()));
 
     // 注册一个新防具（头盔），名称是Blade_SunRise_Helmet
     public static final Item Blade_SunRise_Helmet = registerItems("blade_sunrise_helmet"
