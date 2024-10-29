@@ -1,6 +1,7 @@
 package com.lou.sao;
 
 import com.lou.sao.datagen.ModBlockTagProvider;
+import com.lou.sao.datagen.ModEntityLootTablesProvider;
 import com.lou.sao.datagen.ModItemTagProvider;
 import com.lou.sao.datagen.ModLootTablesProvider;
 import com.lou.sao.datagen.ModModelsProvider;
@@ -30,6 +31,7 @@ public class SAOModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTablesProvider::new);
 		pack.addProvider(ModPoiTagsProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModEntityLootTablesProvider::new);
 	}
 
 	@Override

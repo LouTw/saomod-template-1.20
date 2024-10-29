@@ -2,22 +2,17 @@ package com.lou.sao.datagen;
 
 import java.util.function.BiConsumer;
 
-import com.lou.sao.SAOMod;
 import com.lou.sao.Item.Moditems;
 import com.lou.sao.entity.ModEntities;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
-import net.minecraft.data.server.loottable.BlockLootTableGenerator;
-import net.minecraft.data.server.loottable.EntityLootTableGenerator;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTable.Builder;
 import net.minecraft.loot.condition.KilledByPlayerLootCondition;
 import net.minecraft.loot.condition.RandomChanceWithLootingLootCondition;
 import net.minecraft.loot.condition.TimeCheckLootCondition;
-import net.minecraft.loot.context.LootContextType;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.LootingEnchantLootFunction;
@@ -25,18 +20,21 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.operator.BoundedIntUnaryOperator;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 public class ModEntityLootTablesProvider extends SimpleFabricLootTableProvider {
 
-    public ModEntityLootTablesProvider(FabricDataOutput dataGenerator, LootContextTypes lootContextTypes) {
+    public ModEntityLootTablesProvider(FabricDataOutput dataGenerator) {
         super(dataGenerator, LootContextTypes.ENTITY);
     }
 
     @Override
     public void accept(BiConsumer<Identifier, Builder> exporter) {
+	   // 将 EntityType 转换为 Identifier
+        Identifier wuboId = Registries.ENTITY_TYPE.getId(ModEntities.WUBO);
        // 添加自定义怪物的掉落战利品列表
-        EntityLootTableGenerator.register(ModEntities.WUBO, createWUBOTableBuilder());
+        exporter.accept(wuboId, createWUBOTableBuilder());
     }
 
     // 此处是仿写远古守卫者的掉落战利品列表，如果想要别的实体类的掉落模式，请参考EntityLootTableGenerator中其他实体
