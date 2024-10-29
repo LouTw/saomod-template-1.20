@@ -21,6 +21,7 @@ public class ModitemGroup {
         // 添加物品
         entries.add(Moditems.Blade_NightFall); 
         entries.add(Moditems.Blade_SunRise); 
+        entries.add(Moditems.Hearthstone);
         // 添加方块
         entries.add(ModBlocks.Blade_nightfall_block);
         // 添加工具

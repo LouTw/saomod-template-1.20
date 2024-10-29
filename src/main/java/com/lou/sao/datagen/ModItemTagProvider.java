@@ -22,7 +22,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
         // 生成tags\items\moditem_list.json，例：生成moditem_list.json并加入blade_nightfall
         getOrCreateTagBuilder(ModTags.Items.MODITEM_LIST)
         .add(Moditems.Blade_NightFall)
-        .add(Moditems.Blade_SunRise);
+        .add(Moditems.Blade_SunRise)
+        .add(Moditems.Hearthstone);
 
         // 生成盔甲类锻造台tags
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
