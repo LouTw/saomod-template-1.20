@@ -22,6 +22,7 @@ public class ModitemGroup {
         entries.add(Moditems.Blade_NightFall); 
         entries.add(Moditems.Blade_SunRise); 
         entries.add(Moditems.Hearthstone);
+        entries.add(Moditems.PetReviveCrystal);
         // 添加方块
         entries.add(ModBlocks.Blade_nightfall_block);
         // 添加工具

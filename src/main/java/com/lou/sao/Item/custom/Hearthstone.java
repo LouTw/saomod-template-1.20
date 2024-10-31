@@ -37,8 +37,9 @@ public class Hearthstone extends Item{
             // 记录新的方块位置
             recordedPositions.add(blockpos);
             player.sendMessage(Text.of("Recorded block position: " + blockpos), false);
+            return ActionResult.SUCCESS;
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.PASS;
     }
 
     @Override
@@ -49,14 +50,15 @@ public class Hearthstone extends Item{
                 // 传送玩家到记录的第一个方块位置
                 BlockPos pos = recordedPositions.get(0);
                 playerEntity.teleport(pos.getX(), pos.getY(), pos.getZ());
+                // 对使用后的物品降低耐久度
+                playerEntity.getStackInHand(hand).damage(1, playerEntity, PlayerEntity -> PlayerEntity.sendToolBreakStatus(PlayerEntity.getActiveHand()));
+                return new TypedActionResult<>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));
             } else {
                 // 如果列表为空，输出提示信息
                 playerEntity.sendMessage(Text.of("No recorded positions to teleport to."), false);
             }
         }
-        // 对使用后的物品降低耐久度
-        playerEntity.getStackInHand(hand).damage(1, playerEntity, PlayerEntity -> PlayerEntity.sendToolBreakStatus(PlayerEntity.getActiveHand()));
-        return new TypedActionResult<>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));
+        return new TypedActionResult<>(ActionResult.PASS, playerEntity.getStackInHand(hand));
     }
 
     // 获取记录的方块位置列表

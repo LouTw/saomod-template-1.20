@@ -22,6 +22,7 @@ public class Moditems {
     public static final Item Blade_SunRise = registerItems("blade_sunrise",new Item(new FabricItemSettings()));
 
     public static final Item Hearthstone = registerItems("hearthstone",new Item(new FabricItemSettings()));
+    public static final Item PetReviveCrystal = registerItems("pet_revive_crystal",new Item(new FabricItemSettings()));
     
     // 注册一个新工具（稿子），名称是Blade_NightFall_pickaxe
     public static final Item Blade_NightFall_pickaxe = registerItems("blade_nightfall_pickaxe"

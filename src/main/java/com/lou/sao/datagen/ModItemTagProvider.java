@@ -23,7 +23,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
         getOrCreateTagBuilder(ModTags.Items.MODITEM_LIST)
         .add(Moditems.Blade_NightFall)
         .add(Moditems.Blade_SunRise)
-        .add(Moditems.Hearthstone);
+        .add(Moditems.Hearthstone)
+        .add(Moditems.PetReviveCrystal);
 
         // 生成盔甲类锻造台tags
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
