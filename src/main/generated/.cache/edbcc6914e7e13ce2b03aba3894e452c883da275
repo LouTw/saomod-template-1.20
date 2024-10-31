@@ -1,8 +1,8 @@
-// 1.20	2024-10-29T09:13:22.3834603	SAOMod/World Gen
+// 1.20	2024-10-31T11:05:00.9092641	SAOMod/World Gen
 e63b58cfbc840cc040134061868ff8dc5a3e5f86 data\saomod\worldgen\configured_feature\blade_nightfall_block.json
 1ef7ac8cea0378716b3043b86a382c40133686d8 data\saomod\worldgen\placed_feature\blade_nightfall_block.json
 28ba1e8824d863e51f7bd132cc28bd50c657a2fa data\saomod\worldgen\configured_feature\nether_blade_nightfall_block.json
 5b760d2abbb478982b92dd333bcca4c23b8ac88e data\saomod\worldgen\configured_feature\end_blade_nightfall_block.json
 25952a82107a644d56670dacf5487dd9e0010021 data\saomod\worldgen\biome\initial_town.json
-ab26e42fe9cf7fb24a144574230028af95dda976 data\saomod\worldgen\placed_feature\nether_blade_nightfall_block.json
 e75ed93bbf06d669e7664a461f44d5aef294bf6a data\saomod\worldgen\placed_feature\end_blade_nightfall_block.json
+ab26e42fe9cf7fb24a144574230028af95dda976 data\saomod\worldgen\placed_feature\nether_blade_nightfall_block.json
