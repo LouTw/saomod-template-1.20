@@ -43,15 +43,15 @@
       "bounding_box": "piece",
       "spawns": [
         {
-          "type": "minecraft:evoker",
+          "type": "minecraft:villager",
           "weight": 5,
           "minCount": 1,
           "maxCount": 2
         },
         {
-          "type": "minecraft:phantom",
+          "type": "minecraft:wolf",
           "weight": 1,
-          "minCount": 1,
+          "minCount": 0,
           "maxCount": 1
         }
       ]

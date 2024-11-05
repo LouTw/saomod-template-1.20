@@ -26,6 +26,7 @@
           }
         },
         {
+          "conditions":"DUAL_WIELDING_SAME_CATEGORY",
           "hitbox": "FORWARD_BOX",
           "damage_multiplier": 1.5,
           "angle": 360,
@@ -36,6 +37,7 @@
           }
         },
         {
+          "conditions":"DUAL_WIELDING_SAME_CATEGORY",
           "hitbox": "HORIZONTAL_PLANE",
           "damage_multiplier": 2,
           "angle": 0,

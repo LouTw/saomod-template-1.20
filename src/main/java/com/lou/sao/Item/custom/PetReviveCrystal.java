@@ -69,16 +69,16 @@ public class PetReviveCrystal extends Item {
                         pet.setPos(pos.getX(), pos.getY() + 1, pos.getZ());
                         pet.setOwner(player);
                         world.spawnEntity(pet);
-                        player.sendMessage(Text.of("Pet revived and tamed!"), false);
+                        player.sendMessage(Text.literal("Pet revived and tamed!"), false);
                         // 移除记录的宠物信息
                         lastDeadPets.remove(player.getUuid());
                         return ActionResult.SUCCESS;
                     }
                 } else {
-                    player.sendMessage(Text.of("You need to use this on a special block!"), false);
+                    player.sendMessage(Text.literal("You need to use this on a special block!"), false);
                 }
             } else {
-                player.sendMessage(Text.of("No pet to revive!"), false);
+                player.sendMessage(Text.literal("No pet to revive!"), false);
             }
         }
         return ActionResult.PASS;

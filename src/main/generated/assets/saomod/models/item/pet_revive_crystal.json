@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "saomod:item/blade_nightfall_sword"
+    "layer0": "saomod:item/pet_revive_crystal"
   }
 }

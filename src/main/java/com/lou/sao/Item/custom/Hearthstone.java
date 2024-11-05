@@ -4,6 +4,7 @@ package com.lou.sao.Item.custom;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -36,7 +38,7 @@ public class Hearthstone extends Item{
             recordedPositions.clear();
             // 记录新的方块位置
             recordedPositions.add(blockpos);
-            player.sendMessage(Text.of("Recorded block position: " + blockpos), false);
+            player.sendMessage(Text.literal("Recorded block position: " + blockpos), false);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
@@ -44,21 +46,35 @@ public class Hearthstone extends Item{
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
-        // 首先确认是否为客户端
-        if(!world.isClient()){
-            if (!recordedPositions.isEmpty()) {
-                // 传送玩家到记录的第一个方块位置
-                BlockPos pos = recordedPositions.get(0);
-                playerEntity.teleport(pos.getX(), pos.getY(), pos.getZ());
-                // 对使用后的物品降低耐久度
-                playerEntity.getStackInHand(hand).damage(1, playerEntity, PlayerEntity -> PlayerEntity.sendToolBreakStatus(PlayerEntity.getActiveHand()));
-                return new TypedActionResult<>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));
-            } else {
-                // 如果列表为空，输出提示信息
-                playerEntity.sendMessage(Text.of("No recorded positions to teleport to."), false);
+        playerEntity.setCurrentHand(hand);
+        return new TypedActionResult<>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));
+    }
+
+    @Override
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        if (user instanceof PlayerEntity) {
+            PlayerEntity playerEntity = (PlayerEntity) user;
+            if (!world.isClient()) {
+                if (!recordedPositions.isEmpty()) {
+                    BlockPos pos = recordedPositions.get(0);
+                    playerEntity.teleport(pos.getX(), pos.getY(), pos.getZ());
+                    stack.damage(1, playerEntity, p -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
+                    playerEntity.sendMessage(Text.literal("Teleported to recorded position."), false);
+                } else {
+                    playerEntity.sendMessage(Text.literal("No recorded positions to teleport to."), false);
+                }
             }
         }
-        return new TypedActionResult<>(ActionResult.PASS, playerEntity.getStackInHand(hand));
+    }
+
+    @Override
+    public int getMaxUseTime(ItemStack stack) {
+        return 2400; // 最大使用时间，单位为tick
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.BOW; // 使用动作，这里使用弓的动作
     }
 
     // 获取记录的方块位置列表
