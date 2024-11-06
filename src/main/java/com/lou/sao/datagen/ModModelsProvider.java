@@ -46,6 +46,7 @@ public class ModModelsProvider extends FabricModelProvider{
         itemModelGenerator.registerArmor((ArmorItem) Moditems.Blade_SunRise_ChestPlate);
         itemModelGenerator.registerArmor((ArmorItem) Moditems.Blade_SunRise_Leggings);
         itemModelGenerator.registerArmor((ArmorItem) Moditems.Blade_SunRise_Boots);
+        itemModelGenerator.registerArmor((ArmorItem) Moditems.NervGear);
     }
 
 }

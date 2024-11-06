@@ -31,7 +31,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
         .add(Moditems.Blade_SunRise_Helmet
         ,Moditems.Blade_SunRise_ChestPlate
         ,Moditems.Blade_SunRise_Leggings
-        ,Moditems.Blade_SunRise_Boots);
+        ,Moditems.Blade_SunRise_Boots
+        ,Moditems.NervGear);
     }
 
 }

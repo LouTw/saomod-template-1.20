@@ -60,6 +60,13 @@ public class ModRecipesProvider extends FabricRecipeProvider{
         .input('^', Items.REDSTONE_BLOCK)
         .criterion(hasItem(Items.NETHERITE_BLOCK), conditionsFromItem(Items.NETHERITE_BLOCK))
         .offerTo(exporter,new Identifier("legendary_blade_upgrade_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Moditems.NervGear,1)
+        .pattern("###")
+        .pattern("# #")
+        .input('#', Items.DIAMOND_BLOCK)
+        .criterion(hasItem(Items.DIAMOND_BLOCK), conditionsFromItem(Items.DIAMOND_BLOCK))
+        .offerTo(exporter,new Identifier("nerve_gear"));
     }
 
 }

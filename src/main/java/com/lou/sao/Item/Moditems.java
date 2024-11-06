@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.PickaxeItem;
@@ -36,6 +37,10 @@ public class Moditems {
     // 注册一个新防具（头盔），名称是Blade_SunRise_Helmet
     public static final Item Blade_SunRise_Helmet = registerItems("blade_sunrise_helmet"
     ,new ModArmorItem(ModArmorMaterial.BLADE_SUNRISE,ArmorItem.Type.HELMET,new FabricItemSettings()));
+
+    public static final Item NervGear = registerItems("nerv_gear"
+    ,new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
     // 注册一个新防具（胸甲），名称是Blade_SunRise_ChestPlate
     public static final Item Blade_SunRise_ChestPlate = registerItems("blade_sunrise_chestplate"
     ,new ModArmorItem(ModArmorMaterial.BLADE_SUNRISE,ArmorItem.Type.CHESTPLATE,new FabricItemSettings()));

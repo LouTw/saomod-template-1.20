@@ -32,7 +32,7 @@ public class ModLootTableModifier {
                 .with(ItemEntry.builder(Moditems.Blade_NightFall)) // 需要添加到战利品列表的物品
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
 
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(poolBuilder);
             }
         });
         // 此处为直接替换写法

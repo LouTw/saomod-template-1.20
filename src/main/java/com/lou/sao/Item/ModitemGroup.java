@@ -35,6 +35,7 @@ public class ModitemGroup {
         entries.add(Moditems.Blade_SunRise_ChestPlate);
         entries.add(Moditems.Blade_SunRise_Leggings);
         entries.add(Moditems.Blade_SunRise_Boots);
+        entries.add(Moditems.NervGear);
         // 添加自定义方块
         entries.add(ModBlocks.LEGENDARY_BLADE_UPGRADE_BLOCK);
 
