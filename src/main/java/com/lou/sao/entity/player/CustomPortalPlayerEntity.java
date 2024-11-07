@@ -3,6 +3,7 @@ package com.lou.sao.entity.player;
 import javax.annotation.Nullable;
 
 import com.lou.sao.Item.Moditems;
+import com.lou.sao.world.dimension.ModDimension;
 import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Either;
 
@@ -45,7 +46,19 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
         // 播放视频的逻辑
         MinecraftClient.getInstance().execute(() -> {
             // 假设有一个视频播放的类 VideoPlayer 暂未实现
-            
+            // 创建并初始化视频播放器
+            VideoPlayer videoPlayer = new VideoPlayer();
+            videoPlayer.play("path/to/video/file.mp4");
+
+            // 渲染视频帧到屏幕
+            while (videoPlayer.isPlaying()) {
+                videoPlayer.renderFrame();
+                try {
+                    Thread.sleep(16); // 每秒60帧
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
             // 视频播放完毕后调用传送逻辑
             this.isPlayingVideo = false;
             this.teleportToSAODimension();
@@ -54,10 +67,9 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
 
     private void teleportToSAODimension() {
         if (this.getWorld() instanceof ServerWorld) {
-			int i = this.getMaxNetherPortalTime();
 			ServerWorld serverWorld = (ServerWorld)this.getWorld();
             MinecraftServer minecraftServer = serverWorld.getServer();
-            RegistryKey<World> registryKey = this.getWorld().getRegistryKey() == World.NETHER ? World.OVERWORLD : World.NETHER;
+            RegistryKey<World> registryKey = this.getWorld().getRegistryKey() == ModDimension.SAO_WORLD_KEY ? World.OVERWORLD : ModDimension.SAO_WORLD_KEY;
             ServerWorld serverWorld2 = minecraftServer.getWorld(registryKey);
             if (serverWorld2 != null && !this.hasVehicle()) {
                 this.getWorld().getProfiler().push("portal");

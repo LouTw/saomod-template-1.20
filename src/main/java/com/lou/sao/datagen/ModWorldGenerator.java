@@ -2,6 +2,7 @@ package com.lou.sao.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -25,6 +26,7 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider{
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DIMENSION_TYPE));
     }
 
 }
