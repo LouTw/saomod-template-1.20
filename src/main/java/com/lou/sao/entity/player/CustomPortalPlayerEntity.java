@@ -44,25 +44,11 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
     private void playVideo() {
         this.isPlayingVideo = true;
         // 播放视频的逻辑
-        MinecraftClient.getInstance().execute(() -> {
-            // 假设有一个视频播放的类 VideoPlayer 暂未实现
-            // 创建并初始化视频播放器
-            VideoPlayer videoPlayer = new VideoPlayer();
-            videoPlayer.play("path/to/video/file.mp4");
 
-            // 渲染视频帧到屏幕
-            while (videoPlayer.isPlaying()) {
-                videoPlayer.renderFrame();
-                try {
-                    Thread.sleep(16); // 每秒60帧
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            // 视频播放完毕后调用传送逻辑
-            this.isPlayingVideo = false;
-            this.teleportToSAODimension();
-        });
+
+        // 视频播放完毕后调用传送逻辑
+        this.isPlayingVideo = false;
+        this.teleportToSAODimension();
     }
 
     private void teleportToSAODimension() {
