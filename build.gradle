@@ -57,6 +57,11 @@ dependencies {
 	// custom portal api
 	modImplementation "net.kyrptonaught:customportalapi:${project.custom_portal_api_version}"
   	include "net.kyrptonaught:customportalapi:${project.custom_portal_api_version}"
+
+	// FFmpeg OpenCV
+	implementation 'org.bytedeco:javacv:1.5.8'
+    implementation 'org.bytedeco:ffmpeg:5.0-1.5.8' 
+    implementation 'org.bytedeco:opencv:4.5.4-1.5.8' 
 }
 
 processResources {

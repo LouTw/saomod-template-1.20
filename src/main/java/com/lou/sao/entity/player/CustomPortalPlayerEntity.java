@@ -3,6 +3,7 @@ package com.lou.sao.entity.player;
 import javax.annotation.Nullable;
 
 import com.lou.sao.Item.Moditems;
+import com.lou.sao.screen.VideoScreen;
 import com.lou.sao.world.dimension.ModDimension;
 import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Either;
@@ -44,7 +45,14 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
     private void playVideo() {
         this.isPlayingVideo = true;
         // 播放视频的逻辑
+        // 创建并初始化视频播放器
+        VideoScreen videoPlayer = new VideoPlayer();
+        videoPlayer.play("path/to/video/file.mp4");
 
+        // 渲染视频帧到屏幕
+        while (videoPlayer.isPlaying()) {
+            videoPlayer.render();
+        }
 
         // 视频播放完毕后调用传送逻辑
         this.isPlayingVideo = false;
