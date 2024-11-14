@@ -1,15 +1,20 @@
 package com.lou.sao.screen;
 
+import com.lou.sao.SAOMod;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.resource.Resource;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.Java2DFrameConverter;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.image.BufferedImage;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 
 public class VideoScreen extends Screen {
@@ -18,11 +23,23 @@ public class VideoScreen extends Screen {
     private int textureId;
     private boolean isPlaying = true;
 
-    public VideoScreen(String videoPath) {
+    public VideoScreen(String relativeVideoPath) {
         super(Text.of("Video Player"));
+        
         try {
-            frameGrabber = new FFmpegFrameGrabber(videoPath);
+            // 使用相对路径Identifier加载资源
+            Identifier videoId = new Identifier(SAOMod.MOD_ID, relativeVideoPath);
+            Resource resource = MinecraftClient.getInstance().getResourceManager().getResource(videoId).orElse(null);
+
+            if (resource == null) {
+                throw new IllegalArgumentException("无法找到视频资源: " + relativeVideoPath);
+            }
+
+            // 获取InputStream用于FFmpegFrameGrabber
+            InputStream videoStream = resource.getInputStream();
+            frameGrabber = new FFmpegFrameGrabber(videoStream);
             frameGrabber.start();
+
             converter = new Java2DFrameConverter();
             textureId = GL11.glGenTextures(); // 创建OpenGL纹理ID
         } catch (Exception e) {

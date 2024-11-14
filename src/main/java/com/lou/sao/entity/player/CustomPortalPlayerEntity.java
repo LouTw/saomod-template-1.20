@@ -46,12 +46,14 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
         this.isPlayingVideo = true;
         // 播放视频的逻辑
         // 创建并初始化视频播放器
-        VideoScreen videoPlayer = new VideoPlayer();
-        videoPlayer.play("path/to/video/file.mp4");
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client.player != null) {
+            // 创建VideoScreen实例，并传入要播放的视频路径
+            String videoPath = "videos/your_video.mp4"; // 替换为实际视频文件
+            VideoScreen videoScreen = new VideoScreen(videoPath);
 
-        // 渲染视频帧到屏幕
-        while (videoPlayer.isPlaying()) {
-            videoPlayer.render();
+            // 设置当前屏幕为VideoScreen
+            client.setScreen(videoScreen);
         }
 
         // 视频播放完毕后调用传送逻辑
