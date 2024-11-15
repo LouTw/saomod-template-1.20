@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "saomod:item/nerv_gear",
+    "layer1": "minecraft:trims/items/helmet_trim_emerald"
+  }
+}

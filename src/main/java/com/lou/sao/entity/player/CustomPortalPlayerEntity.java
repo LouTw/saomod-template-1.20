@@ -1,6 +1,5 @@
 package com.lou.sao.entity.player;
 
-import javax.annotation.Nullable;
 
 import com.lou.sao.Item.Moditems;
 import com.lou.sao.screen.VideoScreen;
@@ -104,7 +103,6 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
 		return playerListEntry != null && playerListEntry.getGameMode() == GameMode.SPECTATOR;
     }
 
-    @Nullable
 	protected PlayerListEntry getPlayerListEntry() {
 		if (this.playerListEntry == null) {
 			this.playerListEntry = MinecraftClient.getInstance().getNetworkHandler().getPlayerListEntry(this.getUuid());
