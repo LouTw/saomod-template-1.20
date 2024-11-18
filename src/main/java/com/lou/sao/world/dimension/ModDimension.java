@@ -15,6 +15,7 @@ import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.dimension.DimensionTypes;
 
+
 public class ModDimension {
 
     public static final RegistryKey<DimensionOptions> SAO_WORLD = RegistryKey.of(RegistryKeys.DIMENSION,
@@ -38,6 +39,6 @@ public class ModDimension {
                 BlockTags.INFINIBURN_OVERWORLD,
                 DimensionTypes.OVERWORLD_ID,
                 1.0f,
-                new DimensionType.MonsterSettings(false,false, UniformIntProvider.create(0,0),0)));
+                new DimensionType.MonsterSettings(true,true, UniformIntProvider.create(0,1),7)));
     }
 }

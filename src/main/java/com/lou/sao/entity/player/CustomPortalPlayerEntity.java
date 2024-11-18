@@ -36,7 +36,11 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
         if (this.isSleeping && ((ArmorItem)this.getInventory().getArmorStack(3).getItem()) == Moditems.NervGear) {
             this.sleepTimer++;
             if (this.sleepTimer >= 60) { // 3 seconds (60 ticks)
-                this.playVideo();
+                if (this.getWorld().getRegistryKey() == World.OVERWORLD) {
+                    this.playVideo();
+                } else {
+                    this.wakeUp(true, true);
+                }
             }
         }
     }
@@ -48,9 +52,8 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player != null) {
             // 创建VideoScreen实例，并传入要播放的视频路径
-            String videoPath = "videos/your_video.mp4"; // 替换为实际视频文件
+            String videoPath = "videos/login.mp4"; // 替换为实际视频文件
             VideoScreen videoScreen = new VideoScreen(videoPath);
-
             // 设置当前屏幕为VideoScreen
             client.setScreen(videoScreen);
         }
@@ -72,7 +75,7 @@ public class CustomPortalPlayerEntity extends PlayerEntity {
                 this.moveToWorld(serverWorld2);
                 this.getWorld().getProfiler().pop();
             }
-        } 
+        }
         this.tickPortalCooldown();
     }    
 
